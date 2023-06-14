@@ -81,7 +81,7 @@ public class SubscriptionService {
 
             currentSubscription.setSubscriptionType(SubscriptionType.ELITE);
             currentSubscription.setTotalAmountPaid(amountNeedToUpgrade);
-            amountToBePaid = amountNeedToUpgrade - currentSubscription.getTotalAmountPaid();
+            amountToBePaid = amountNeedToUpgrade - currentAmount;
             user.setSubscription(currentSubscription);
             userRepository.save(user);
         }
@@ -92,7 +92,7 @@ public class SubscriptionService {
 
             currentSubscription.setSubscriptionType(SubscriptionType.PRO);
             currentSubscription.setTotalAmountPaid(amountNeedToUpgrade);
-            amountToBePaid = amountNeedToUpgrade - currentSubscription.getTotalAmountPaid();
+            amountToBePaid = amountNeedToUpgrade - currentAmount;
             user.setSubscription(currentSubscription);
             userRepository.save(user);
         }
